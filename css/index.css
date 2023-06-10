@@ -1,0 +1,58 @@
+main {
+    width: 60%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: palegoldenrod;
+
+}
+
+.info {
+    margin: 10px 0;
+}
+.infoBtn{
+    display: flex;
+    background: mediumpurple;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+
+    height: 30%;
+    width: 40%;
+    margin: 10px auto;
+}
+
+.infoBtn:hover {
+    background: rebeccapurple;
+}
+
+.infoBtn:active {
+    background: purple;
+}
+.user {
+    display: flex;
+    width: 48%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background: palegoldenrod;
+    border-radius: 15px;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
