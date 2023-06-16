@@ -5,19 +5,19 @@ fetch("http://jsonplaceholder.typicode.com/users")
     .then(value => {
         let generator = sectionGenerator(value);
         let section = generator.next().value;
-        for (const valueElement of value) {
+        for (const user of value) {
             if (section.getElementsByTagName('div').length === 2) {
                 mainHTML.appendChild(section);
                 section = generator.next().value;
                 let div = document.createElement('div');
                 div.className = 'user';
-                div.innerHTML = `<p class="info">Id ${valueElement.id} - ${valueElement.name}</p><p class="infoBtn"><a href='user-details.html?id=${valueElement.id}'>Iнфо</a></p>`
+                div.innerHTML = `<p class="info">Id ${user.id} - ${user.name}</p><p class="infoBtn"><a href='user-details.html?id=${user.id}'>Iнфо</a></p>`
                 section.appendChild(div);
 
             } else {
                 let div = document.createElement('div');
                 div.className = 'user';
-                div.innerHTML = `<p class="info">Id ${valueElement.id} - ${valueElement.name}</p><p class="infoBtn"><a  href='user-details.html?id=${valueElement.id}'>Iнфо</a></p>`
+                div.innerHTML = `<p class="info">Id ${user.id} - ${user.name}</p><p class="infoBtn"><a  href='user-details.html?id=${user.id}'>Iнфо</a></p>`
                 section.appendChild(div);
             }
         }
